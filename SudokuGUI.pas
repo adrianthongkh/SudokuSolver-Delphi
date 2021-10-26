@@ -59,9 +59,7 @@ end;
 
 procedure TForm2.BtnSolveClick(Sender: TObject);
 var RowArr: array[0..9] of Byte;
-    temp: Integer;
 begin
-
   for var I := 0 to 8 do begin
     for var J := 0 to 8 do begin
       if StringGrid.Cells[J, I] = '' then RowArr[J] := 0
@@ -82,7 +80,6 @@ begin
     Elapsed := Stopwatch.Elapsed;
     TimeElapsed.Caption := 'Time Taken to solve: '+ sLineBreak + Elapsed.TotalSeconds.ToString + 's';
   end;
-
 end;
 
 procedure TForm2.BtnClearClick(Sender: TObject);

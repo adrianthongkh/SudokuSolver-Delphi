@@ -69,10 +69,11 @@ begin
           SudokuGrid[row][col] := I;
           SolveSudokuCell(row, col+1);
         end;
+      // Trigger Backtracking
       end else if (I = 10) and (not complete) then begin
         SudokuGrid[row][col] := 0;
         Exit;
-      end else Exit;
+      end;
     end;
   end else SolveSudokuCell(row, col+1);
 end;
