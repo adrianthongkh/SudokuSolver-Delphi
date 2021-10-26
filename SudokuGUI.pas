@@ -65,6 +65,10 @@ begin
   for var I := 0 to 8 do begin
     for var J := 0 to 8 do begin
       if StringGrid.Cells[J, I] = '' then RowArr[J] := 0
+      else if StrToInt(StringGrid.Cells[J, I]) > 9 then begin
+        ShowMessage('Given Sudoku is not valid.');
+        Exit;
+      end
       else RowArr[J] := StrToInt(StringGrid.Cells[J, I]);
     end;
     CreateSudoku(I+1, RowArr);
