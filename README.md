@@ -1,2 +1,2 @@
 # SudokuSolver-Delphi
-A delphi implementation to solve Sudoku. (GUI-based)
+A delphi implementation using backtracking (recursion) to solve Sudoku. (GUI-based)
